@@ -1,0 +1,53 @@
+.container{
+    opacity: 0;
+    width: 100%;
+    max-width: 720px;
+    padding: 0px 40px;
+    position: absolute;
+    top: calc(100% + 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease-in;
+    z-index: -999;
+}
+
+.show{
+    top: calc(100% + 10px);
+    opacity: 1;
+    z-index: 1;
+}
+
+.container form{
+    padding: 17px;
+    background-color: black;   
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container form input{
+    max-width: 780px;
+    display: block;
+    font-family: 'Leckerli One', cursive;   
+    width: 100%;
+    border: none;
+    outline: none;
+    color: inherit;
+    background-color: inherit;
+    font-size: 1.2rem;
+}
+
+.container form > button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+
+@media screen and (max-width:768px) {
+
+}
