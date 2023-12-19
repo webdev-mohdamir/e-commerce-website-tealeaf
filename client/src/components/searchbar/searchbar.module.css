@@ -37,6 +37,11 @@
     font-size: 1.2rem;
 }
 
+.container form input::placeholder{
+    font-family: 'Leckerli One', cursive;   
+    font-size: 1.2rem;
+}
+
 .container form > button{
     background-color: transparent;
     border: none;
@@ -45,9 +50,4 @@
     font-size: 1.1rem;
     cursor: pointer;
     padding-left: 15px;
-}
-
-
-@media screen and (max-width:768px) {
-
 }
