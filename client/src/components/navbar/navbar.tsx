@@ -1,21 +1,26 @@
 import { useRef, useState } from "react";
 import "../../assets/css/simple-line-icons.css";
 import styles from "./navbar.module.css";
-import { navLinks } from "../../constants";
+import { dummyCartData, navLinks } from "../../constants";
 import Searchbar from "../searchbar/Searchbar";
+import { DescrFunction } from "../../types/functionalTypes";
+import CartBlock from "../cart-block/cartBlock";
+
+
 
 export const Navbar = () => {
  
     const [menuOpen, setMenuOpen] = useState(false);
-    const [searchOpen, setSearchOpen] = useState(true);
+    const [searchOpen, setSearchOpen] = useState(false);
+    const [cartOpen, setCartOpen] = useState(false);
     const mobileMenuBtn = useRef<HTMLDivElement | null>(null);
 
-    const handlMenuClick = ()=>{
-        setMenuOpen(menuOpen ? false : true); 
-    }
+    const handleBoolean = (func:DescrFunction, value : boolean)=>{
 
-    const handleSeachClick = ()=>{
-        setSearchOpen(searchOpen ? false : true);        
+        !searchOpen ? (cartOpen ? setCartOpen(false): null) : (!cartOpen && searchOpen ? setSearchOpen(false): null)
+        
+        return func(value ? false : true)
+        
     }
 
     return (
@@ -43,17 +48,27 @@ export const Navbar = () => {
                 
                 {/* Search Bar */}
                 <div className={styles.search_container}
-                    onClick={handleSeachClick}
+                    onClick={() => handleBoolean(setSearchOpen, searchOpen)}
                 >
                     <i className="icon-magnifier"></i>
                 </div>
                 
                 {/* Cart Bag */}
-                <div className={styles.bag_container}>
-                    <i className="icon-handbag"></i>
-                    <div className={styles.cart_count}>
-                        2
+                <div
+                    className={styles.cart_container}
+                    >
+                    <div
+                        className={styles.bag_container}
+                        onClick={() => handleBoolean(setCartOpen,   cartOpen)}
+                    >
+                        <i className="icon-handbag"></i>
+                        <div className={styles.cart_count}>
+                            {dummyCartData.length}
+                        </div>
                     </div>
+
+                    {/* Cart Block */}
+                    <CartBlock isOpen={cartOpen} data={dummyCartData}/>
                 </div>
                 
                 {/* User */}
@@ -66,6 +81,7 @@ export const Navbar = () => {
 
             </div>
             
+            {/* Search Bar */}
             <Searchbar isOpen={searchOpen}/>
 
             {/* Mobile Menu and toggle bar */}
@@ -73,7 +89,7 @@ export const Navbar = () => {
                 <span>menu</span>
                 <div className="toggle_menu"
                     ref={mobileMenuBtn}
-                    onClick={handlMenuClick}
+                    onClick={()=>handleBoolean(setMenuOpen, menuOpen)}
                 >
                     <i className="icon-menu"></i>
                 </div>

@@ -9,6 +9,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --text-green:#519f10;
+  --grey-300:#F3F3F3;
 }
 
 *{
@@ -40,6 +43,11 @@ h1 {
 
 h1, h2, h3, h4, h5{
   font-family: 'Leckerli One', cursive;
+}
+
+img{
+  max-width: 100%;
+  width: 100%;
 }
 
 .wrapper {

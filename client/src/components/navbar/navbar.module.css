@@ -1,5 +1,5 @@
 nav{
-    background-color: #F3F3F3;
+    background-color: var(--grey-300);
     padding: 10px 0px;
 }
 
@@ -26,13 +26,14 @@ nav{
     color: green;
 }
 
-.search_container{
+.search_container,
+.bag_container{
     cursor: pointer;
 }
 
-.bag_container{
+.bag_container,
+.cart_container{
     position: relative;
-    cursor: pointer;
 }
 
 .cart_count{
@@ -40,7 +41,7 @@ nav{
     top: -8px;
     right: -16px;
     font-size: 0.6rem;
-    background-color: #519f10;
+    background-color: var(--text-green);
     color: #fff;
     padding: 2px 8px;
     border-radius: 50%;
