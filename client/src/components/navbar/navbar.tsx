@@ -1,10 +1,11 @@
-import { useRef, useState } from "react";
+import {useEffect, useRef, useState } from "react";
 import "../../assets/css/simple-line-icons.css";
 import styles from "./navbar.module.css";
 import { dummyCartData, navLinks } from "../../constants";
 import Searchbar from "../searchbar/Searchbar";
 import { DescrFunction } from "../../types/functionalTypes";
 import CartBlock from "../cart-block/cartBlock";
+import { cartItemType } from "../../types/cartTypes";
 
 
 
@@ -13,15 +14,25 @@ export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
     const [cartOpen, setCartOpen] = useState(false);
+    const [cartData, setCartData] = useState<cartItemType[] | null>(null)
+
     const mobileMenuBtn = useRef<HTMLDivElement | null>(null);
 
     const handleBoolean = (func:DescrFunction, value : boolean)=>{
 
-        !searchOpen ? (cartOpen ? setCartOpen(false): null) : (!cartOpen && searchOpen ? setSearchOpen(false): null)
-        
+        !searchOpen 
+        ? (cartOpen ? setCartOpen(false) : (menuOpen && setMenuOpen(false)))
+        : (!cartOpen && searchOpen ? setSearchOpen(false) : (menuOpen && setMenuOpen(false)));
+
         return func(value ? false : true)
         
     }
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setCartData(dummyCartData)
+        }, 2000)
+    }, [])
 
     return (
     // Navbar 
@@ -63,12 +74,12 @@ export const Navbar = () => {
                     >
                         <i className="icon-handbag"></i>
                         <div className={styles.cart_count}>
-                            {dummyCartData.length}
+                            {cartData ? cartData.length : 0}
                         </div>
                     </div>
 
                     {/* Cart Block */}
-                    <CartBlock isOpen={cartOpen} data={dummyCartData}/>
+                    <CartBlock isOpen={cartOpen} data={cartData && cartData}/>
                 </div>
                 
                 {/* User */}

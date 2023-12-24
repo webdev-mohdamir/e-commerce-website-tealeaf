@@ -1,0 +1,28 @@
+header{
+    background-image:url('bg-images/slider-1.webp');
+    background-position: center center;
+    /* background-size: cover; */
+    /* height: calc(100vh - 150px); */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.header-info{
+    max-width: 500px;
+}
+
+.header-info h1 span{
+    color: var(--text-green);
+    line-height: 65px;
+}
+
+.header-info h1{
+    margin-bottom: 35px;
+}
+
+.header-info p{
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    line-height: 25px;
+}
