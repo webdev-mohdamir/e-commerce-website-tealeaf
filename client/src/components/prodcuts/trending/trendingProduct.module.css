@@ -8,4 +8,12 @@
 
 .container h2{
     text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }

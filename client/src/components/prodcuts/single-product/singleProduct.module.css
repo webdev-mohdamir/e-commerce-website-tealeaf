@@ -1,5 +1,6 @@
 .product_wrapper{
     max-width: 300px;
+    min-width: 260px;
 }
 
 .product_thum{
@@ -27,10 +28,11 @@
     font-weight: 600;
     font-family: 'Leckerli One', cursive;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     border-bottom-right-radius: 50px;
     left: 0px;
     pointer-events: none;
+    text-transform: uppercase;
 }
 
 .product_action{
