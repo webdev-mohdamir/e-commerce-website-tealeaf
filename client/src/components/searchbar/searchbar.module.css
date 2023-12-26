@@ -4,17 +4,17 @@
     max-width: 720px;
     padding: 0px 40px;
     position: absolute;
-    top: calc(100% + 30px);
+    top: calc(100% + 50px);
     left: 50%;
     transform: translateX(-50%);
-    transition: all 0.5s ease-in;
-    z-index: -999;
+    transition: all 0.8s ease-in;
+    z-index: -1;
 }
 
 .show{
     top: calc(100% + 10px);
     opacity: 1;
-    z-index: 1;
+    z-index: 0;
 }
 
 .container form{

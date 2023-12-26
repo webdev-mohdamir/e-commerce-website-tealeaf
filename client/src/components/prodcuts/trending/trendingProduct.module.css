@@ -1,0 +1,19 @@
+.container{
+    background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)) repeat scroll 0 0%,
+        rgba(0, 0, 0, 0) url(bg-images/bg-1.webp) no-repeat scroll center center / cover;
+        padding: 100px 0px;
+    text-align: center;
+
+}
+
+.container h2{
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}

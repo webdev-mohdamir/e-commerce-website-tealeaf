@@ -85,3 +85,9 @@ nav{
         margin-top: 0px;
     }
 }
+
+@media screen and (max-width: 640px){
+    .cart_container{
+        position: static;
+    }
+}

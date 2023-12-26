@@ -1,24 +1,28 @@
 .container {
     opacity: 0;
     min-width: 400px;
+    max-width: 400px;
     width: 100%;
     padding: 25px;
     position: absolute;
     top: calc(100% + 50px);
     left: 50%;
-    transform: translateX(-50%) translateY(-100%);
+    transform: translateX(-50%) translateY(-130%);
+    /* transition: opacity 0.6s ease-in, transform 0.6s ease-in; */
     transition: all 0.6s ease-in;
-    z-index: -999;
     box-shadow: 0px 0px 12px 2px var(--grey-300);
+    background-color: #fff;
+    pointer-events: none;
 }
 
 .show {
     opacity: 1;
-    z-index: 1;
     transform: translateX(-50%) translateY(0%);
+    pointer-events: fill;
 }
 
 .cartItemsBox{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -56,7 +60,7 @@
 }
 
 .cart_item__img {
-    max-width: 100px;
+    max-width: 70px;
     border: 2px solid var(--grey-300);
 }
 
@@ -79,7 +83,7 @@
 .item_price{
     font-weight: 700;
     color: var(--text-green);
-    font-size: 1.1876rem;
+    font-size: 0.9rem;
 }
 
 .item_delete{
@@ -98,4 +102,62 @@
 
 .item_delete:hover i::before{
     background-color: rgb(158, 0, 0);
+}
+
+.cartitemTotal{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.cartMainBtns{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    text-transform: capitalize;
+}
+
+.btn{
+    border-radius: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 10px;
+    width: 50%;
+    font-size: 1rem;
+    color: #fff;
+    outline: none;
+    border: none;
+    background-color: var(--text-green);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease-in;
+}
+
+.btn:hover{
+    background-color: var(--grey-300);
+    text-shadow: 0px 2px 12px var(--text-green);
+    color: var(--text-green);
+}
+
+@media screen and (min-width:769px) and (max-width:876px) {
+    .show{
+        transform: translateX(-65%) translateY(0%);
+    }
+}
+
+@media (max-width:768px){
+    .show {
+        transform: translateX(-65%) translateY(15%);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container{
+        min-width: 100%;
+    }
+
+    .show {
+        transform: translateX(-50%) translateY(-8%);
+    }
 }

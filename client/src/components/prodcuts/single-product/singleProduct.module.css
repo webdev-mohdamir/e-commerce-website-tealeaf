@@ -1,0 +1,94 @@
+.product_wrapper{
+    max-width: 300px;
+    min-width: 260px;
+}
+
+.product_thum{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.thum_img{
+    height: inherit;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.tag{
+    position: absolute;
+    display: inline-block;
+    line-height: 42px;
+    padding-left: 15px;
+    padding-right: 30px;
+    background-color: var(--text-green);
+    font-weight: 600;
+    font-family: 'Leckerli One', cursive;
+    color: #fff;
+    font-size: 0.8rem;
+    border-bottom-right-radius: 50px;
+    left: 0px;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+
+.product_action{
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+
+.product_thum:hover .product_action{
+    transform: translateY(-15%);
+}
+
+.action_btn{
+    padding: 15px;
+    line-height: 4px;
+    border: none;
+    color: var(--text-green);
+    background-color: var(--grey-300);
+    cursor: pointer;
+}
+
+.action_btn:hover{
+    background-color: var(--text-green);
+    color: #fff;
+}
+
+.icon::before{
+    font-size: 1.4rem;
+}
+
+.product_title{
+    display: block;
+    margin-top: 10px;
+    font-weight: normal;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+}
+
+.product_title:hover{
+    color: var(--text-green);
+}
+
+.sale_price{
+    font-size: 1.2rem;
+    color: var(--text-green);
+    font-weight: 600;
+}
+
+.original_price{
+    text-decoration: line-through;
+    font-size: 1rem;
+    color: #323232;
+    padding-right: 10px;
+}
