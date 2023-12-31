@@ -26,3 +26,33 @@ header{
     letter-spacing: 0.05rem;
     line-height: 25px;
 }
+
+/* Banner */
+.banner{
+    height: 500px;
+    background-image: url("bg-images/bg-2.webp");
+    background-position: left top;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.banner_info{
+    color: #fff;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateX(20%) translateY(-50%);
+}
+
+.banner_info > h2{
+    font-size: 3.234rem;
+    margin-bottom: 20px;
+}
+
+.banner_info>p{color: #fff;}
+
+.banner_info > .cta_btn{
+    font-size: 0.8rem;
+}
