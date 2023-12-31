@@ -20,6 +20,7 @@ const TrendingProdcuts = () => {
             <div className={styles.products}>
                 {trendingProd && trendingProd.map(data => (
                   <SingleProduct 
+                    key={data.prod_id}
                     prod_id ={data.prod_id}
                     prod_name ={data.prod_name} 
                     prod_price ={data.prod_price}

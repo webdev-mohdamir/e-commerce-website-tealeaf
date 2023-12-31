@@ -1,6 +1,19 @@
 .product_wrapper{
     max-width: 300px;
     min-width: 260px;
+    animation: showProd;
+    animation-duration: 2s;
+}
+
+@keyframes showProd{
+    from{
+        opacity: 0.5;
+        transform: translateY(10%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 
 .product_thum{

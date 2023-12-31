@@ -1,0 +1,43 @@
+.container {
+    background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)) repeat scroll 0 0%,
+        rgba(0, 0, 0, 0) url(bg-images/bg-1.webp) no-repeat scroll center center / cover;
+    padding: 100px 0px;
+    text-align: center;
+}
+
+.container h2 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    transition: all 0.8s;
+}
+
+.prodCatagories{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.prodType{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-right: 2px solid rgb(158, 158, 158);
+    font-family: 'Poppins';
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    text-transform: capitalize;
+}
+
+.prodType:last-child{
+    border-right: none;
+}

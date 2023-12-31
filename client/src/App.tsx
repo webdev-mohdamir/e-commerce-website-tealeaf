@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './App.css'
 import TrendingProdcuts from './components/prodcuts/trending/trendingProdcuts';
+import NewProdcuts from './components/prodcuts/new-products/newProducts';
 
 function App() {
 
@@ -30,6 +31,8 @@ function App() {
         </div>
       </section>
       {/* END Banner */}
+
+      <NewProdcuts />
     </>
   )
 }
