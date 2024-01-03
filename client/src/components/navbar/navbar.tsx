@@ -1,11 +1,11 @@
-import {useEffect, useRef, useState } from "react";
+import {useRef, useState } from "react";
 import "../../assets/css/simple-line-icons.css";
 import styles from "./navbar.module.css";
-import { dummyCartData, navLinks } from "../../constants";
+import {navLinks } from "../../constants";
 import Searchbar from "../searchbar/Searchbar";
 import { DescrFunction } from "../../types/functionalTypes";
 import CartBlock from "../cart-block/cartBlock";
-import { cartItemType } from "../../types/cartTypes";
+import { useCart } from "../../context/cart/CartContext";
 
 
 
@@ -14,7 +14,6 @@ export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
     const [cartOpen, setCartOpen] = useState(false);
-    const [cartData, setCartData] = useState<cartItemType[] | null>(null)
 
     const mobileMenuBtn = useRef<HTMLDivElement | null>(null);
 
@@ -28,11 +27,7 @@ export const Navbar = () => {
         
     }
 
-    useEffect(()=>{
-        setTimeout(()=>{
-            setCartData(dummyCartData)
-        }, 2000)
-    }, [])
+    const { cartData } = useCart();
 
     return (
     // Navbar 
@@ -79,7 +74,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Cart Block */}
-                    <CartBlock isOpen={cartOpen} data={cartData && cartData}/>
+                    <CartBlock isOpen={cartOpen}/>
                 </div>
                 
                 {/* User */}

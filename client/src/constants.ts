@@ -57,6 +57,7 @@ export const dummyProductData: SingleProductType[] = [
     prod_url: "#",
     prod_img_url: "item-1.webp",
     prod_type: "Black Coffee",
+    prod_quantity: 1
   },
   {
     prod_id: "2",
@@ -67,6 +68,7 @@ export const dummyProductData: SingleProductType[] = [
     prod_url: "#",
     prod_img_url: "item-2.webp",
     prod_type: "Black Coffee",
+    prod_quantity: 1
   },
   {
     prod_id: "3",
@@ -77,6 +79,7 @@ export const dummyProductData: SingleProductType[] = [
     prod_url: "#",
     prod_img_url: "item-3.webp",
     prod_type: "Brown Tea",
+    prod_quantity: 1
   },
   {
     prod_id: "4",
@@ -87,6 +90,7 @@ export const dummyProductData: SingleProductType[] = [
     prod_url: "#",
     prod_img_url: "item-4.webp",
     prod_type: "Green Tea",
+    prod_quantity: 1
   },
   {
     prod_id: "5",
@@ -97,6 +101,7 @@ export const dummyProductData: SingleProductType[] = [
     prod_url: "#",
     prod_img_url: "item-5.webp",
     prod_type: "Black Coffee",
+    prod_quantity: 1
   },
   {
     prod_id: "6",
@@ -107,6 +112,7 @@ export const dummyProductData: SingleProductType[] = [
     prod_url: "#",
     prod_img_url: "item-6.webp",
     prod_type: "Black Coffee",
+    prod_quantity: 1
   },
   {
     prod_id: "7",
@@ -117,6 +123,7 @@ export const dummyProductData: SingleProductType[] = [
     prod_url: "#",
     prod_img_url: "item-7.webp",
     prod_type: "Brown Tea",
+    prod_quantity: 1
   },
   {
     prod_id: "8",
@@ -127,6 +134,7 @@ export const dummyProductData: SingleProductType[] = [
     prod_url: "#",
     prod_img_url: "item-8.webp",
     prod_type: "Green Tea",
+    prod_quantity: 1
   },
 ];
 

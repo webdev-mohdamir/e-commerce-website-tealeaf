@@ -8,5 +8,12 @@ export type SingleProductType = {
     prod_tag : string | null,
     prod_url : string,
     prod_img_url : string,
+    prod_quantity?: number,
     prod_type? : ProductCatagory
 }
+
+
+export type productProps = {
+  isOpen: boolean;
+  // data: SingleProductType[] | null 
+};
